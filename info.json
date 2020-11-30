@@ -5,7 +5,7 @@
   "author": "adamwong246",
   "contact": "",
   "homepage": "",
-  "description": "Heavily trafficked areas will change over time, on foot or any vehicle.",
-  "factorio_version": "1.1",
+  "description": "The earth under trafficked areas will wear down, creating natural paths wherever you walk or drive Cars (automobiles and tanks). These paths are temporary and will eventually regenerate.",
+  "factorio_version": "1.0",
   "dependencies": ["base >= 0.4.1", "?alien-biomes"]
 }

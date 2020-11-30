@@ -1,4 +1,7 @@
 DIRT_THRESHOLD = 12
+PLAYER_FORCE = 1
+DIRT_REGENERATION = 1
+VEHICLE_FUDGE_FACTOR = 0.001
 
 --This is all subjective.
 DIRT= {
@@ -196,13 +199,13 @@ function dirtDirt(event)
 			
 			--game.print("Dirt value now at: ".. global.dirt[tile.position.x][tile.position.y])
 
-			dirtAdd(p.surface.name, tile.position.x, tile.position.y) --Wear the center tile out one additional step.
+			dirtAdd(p, tile.position.x, tile.position.y) --Wear the center tile out one additional step.
 			local dirt = {}
 			for xx = -1, 1 do
 				for yy = -1, 1 do
 					if not (math.abs(xx) == math.abs(yy)) or xx == 0 then
 						-- Check twice at xx == 0, yy == 0
-						if dirtAdd(p.surface.name, tile.position.x + xx, tile.position.y + yy) then
+						if dirtAdd(p, tile.position.x + xx, tile.position.y + yy) then
 
 							local validTile = p.surface.get_tile(tile.position.x + xx, tile.position.y + yy)
 							if not validTile.collides_with("water-tile") and not validTile.hidden_tile then
@@ -225,12 +228,22 @@ function dirtDirt(event)
 end
 
 --Add to dirtDirt and return true if threshhold has been met.
-function dirtAdd(surfacename, x, y)
+function dirtAdd(p, x, y)
+	local surfacename = p.surface.name
 	local key = surfacename .. "," .. x .. "," .. y
+
+	local dirtForce
+	
+	if p.walking_state.walking then
+		dirtForce = PLAYER_FORCE
+	else
+		dirtForce = p.vehicle.speed * p.vehicle.prototype.weight * VEHICLE_FUDGE_FACTOR
+	end
+
 	if global.dirt[key] then
-		global.dirt[key] = global.dirt[key] + 1
+		global.dirt[key] = global.dirt[key] + dirtForce
 	else	
-		global.dirt[key] = 1
+		global.dirt[key] = dirtForce
 	end
 	if global.dirt[key] >= DIRT_THRESHOLD then
 		global.dirt[key] = global.dirt[key] - DIRT_THRESHOLD
@@ -240,7 +253,7 @@ end
 
 function cleanDirt()
 	for k, v in pairs(global.dirt) do
-		global.dirt[k] = global.dirt[k] - 1
+		global.dirt[k] = global.dirt[k] - DIRT_REGENERATION
 		if global.dirt[k] <= 0 then
 			global.dirt[k] = nil
 		end
