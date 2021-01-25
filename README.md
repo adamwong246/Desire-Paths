@@ -5,5 +5,5 @@ This makes the "decay" of soil a function of the speed and weight of your vehicl
 
 Much thanks to mylon @ https://mods.factorio.com/user/Mylon and his work on https://mods.factorio.com/mod/Dirt_Path, on which this is heavily based.
 
-![demo](https://github.com/adamwong246/ShortReach/blob/master/screenshot0.png)
-![demo](https://github.com/adamwong246/ShortReach/blob/master/screenshot1.png)
+![demo](https://github.com/adamwong246/Desire-Paths/blob/master/screenshot0.png)
+![demo](https://github.com/adamwong246/Desire-Paths/blob/master/screenshot1.png)
