@@ -230,7 +230,7 @@ function dirtAdd(p, x, y)
 	local dirtForce
 
 	if p.walking_state.walking then
-		dirtForce = settings.global["Dirt_Path_plusplus-walkingForce"].value
+		dirtForce = settings.global["desire_paths-walkingForce"].value
 	else
 		dirtForce = p.vehicle.speed * p.vehicle.prototype.weight
 	end
@@ -240,15 +240,15 @@ function dirtAdd(p, x, y)
 	else
 		global.dirt[key] = dirtForce
 	end
-	if global.dirt[key] >= settings.global["Dirt_Path_plusplus-threshold"].value then
-		global.dirt[key] = global.dirt[key] - settings.global["Dirt_Path_plusplus-threshold"].value
+	if global.dirt[key] >= settings.global["desire_paths-threshold"].value then
+		global.dirt[key] = global.dirt[key] - settings.global["desire_paths-threshold"].value
 		return true
 	end
 end
 
 function cleanDirt()
 	for k, v in pairs(global.dirt) do
-		global.dirt[k] = global.dirt[k] - settings.global["Dirt_Path_plusplus-regeneration"].value
+		global.dirt[k] = global.dirt[k] - settings.global["desire_paths-regeneration"].value
 		if global.dirt[k] <= 0 then
 			global.dirt[k] = nil
 		end

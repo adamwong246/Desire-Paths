@@ -1,69 +1,13 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.3.5
-Date: 2020-11-24
-  Changes:
-    - Updated for Factorio 1.1
+Version: 0.0.2
+Date: 01.25.2021
+
+Init mod
+
 ---------------------------------------------------------------------------------------------------
-Version: 1.3.4
-Date: 2020-05-19
-  Changes:
-    - Updated to use the new set_tiles flag so the Terraforming check is no longer required.
-    - Made tiles wear down slightly faster since there are 15 stages between the lushest grass and the end stage.
-  Bugfixes:
-    - Finally added proper multisurface support  
 ---------------------------------------------------------------------------------------------------
-Version: 1.3.3
-Date: 2020.4.1
-  Bugfixes:
-    - Fixed a typo in progression chart
+Version: 0.1
+Date: 2020-1-25
+
+Forked from DirtPath
 ---------------------------------------------------------------------------------------------------
-Version: 1.3.2
-Date: 2020.3.31
-  Changes:
-    - Landfill can be trampled.
-    - Added compatability with Terraforming.  Won't make desert if that's installed.
----------------------------------------------------------------------------------------------------
-Version: 1.3.1
-Date: 2020.1.23
-  Changes:
-    - Updated for Factorio 0.18
----------------------------------------------------------------------------------------------------
-Version: 1.3.0
-Date: 2019.09.19
-  Bugfixes:
-    - Now includes proper support for Alien Biomes.  Dirt won't magically change color when worn down.
-  Changes:
-    - Vanilla wear progression tweaked slightly.
----------------------------------------------------------------------------------------------------
-Version: 1.2.0
-Date: 2019.09.03
-  Changes:
-    - Slowed wear rates slightly, put more focus on the center tile.
-    - Wearing tiles removes decals.
----------------------------------------------------------------------------------------------------
-Version: 1.1.6
-Date: 2.3.2019
-  Changes:
-    - Updated for 0.17
----------------------------------------------------------------------------------------------------
-Version: 1.1.5
-Date: 20.12.2018
-  Bugfixes:
-    - Dirt Path no longer will modify factorissimo tiles.
----------------------------------------------------------------------------------------------------
-Version: 1.1.4
-Date: 8 . 3. 2018
-  Bugfixes:
-    - Dirt Path no longer will change void to dirt.
-    - Dirt Path was not properly wearing down tiles to the left and above the player as intended.
----------------------------------------------------------------------------------------------------
-Version: 1.1.3
-Date: 28 . 2. 2018
-  Bugfixes:
-    - Migration wasn't being applied properly.  Made to be more aggressive.
----------------------------------------------------------------------------------------------------
-Version: 1.1.2
-Date: 27 . 2. 2018
-  Changes:
-    - Tile wear logic changed.  Adjacent tiles wear out slower than the tile the player walks on.
-    - Changed method from a 2d table to a 1d table.  Performance is improved a miniscule amount.

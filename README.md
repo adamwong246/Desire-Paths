@@ -1,4 +1,4 @@
-# DirtPath-factorio_mod
+# Desire Paths
 a fork of https://mods.factorio.com/mod/Dirt_Path
 
 This makes the "decay" of soil a function of the speed and weight of your vehicle. So a big heavy tank at high speed will cause a more damage than just walking. 
