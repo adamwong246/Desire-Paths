@@ -1,12 +1,12 @@
 {
   "name": "desire_paths",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "title": "Desire Paths",
   "author": "adamwong246",
   "contact": "adamwong246@gmail.com",
   "homepage": "https://github.com/adamwong246/desire_paths",
   "description": "The earth under trafficked areas will wear down, creating natural paths wherever you walk or drive Cars (automobiles and tanks). These paths are temporary and will eventually regenerate.",
-  "factorio_version": "1.0",
+  "factorio_version": "1.1",
   "dependencies": [
     "base >= 0.4.1",
     "?alien-biomes"

@@ -1,0 +1,7 @@
+locale/
+migrations/
+changelog.txt
+control.lua
+info.json
+README.md
+settings.lua
